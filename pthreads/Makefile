@@ -3,10 +3,7 @@ CC=gcc
 CFLAGS= -pthread
 DEPS= myStructs.h mmio.h myMatrix.h graphMinor.h
 
-all: main test
-
-main: main.o myStructs.o mmio.o myMatrix.o graphMinor.o
-	$(CC) $(CFLAGS) -o $@ $^
+all: test
 
 test: test.o myStructs.o mmio.o myMatrix.o graphMinor.o
 	$(CC) $(CFLAGS) -o $@ $^
